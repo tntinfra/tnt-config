@@ -11,7 +11,7 @@ class noc {
 
   file { '/root/.gitconfig':
     ensure => 'file',
-    content => "[user]\n  email = tntadmin@tntinfra.net\n  name = TNT Admin\n",
+    content => "[user]\n  email = tntadmin@tntinfra.net\n  name = TNT Admin\n[push]\n  default = simple\n",
   }
 }
 
