@@ -3,14 +3,6 @@ class noc {
     ensure => 'installed',
   }
 
-  package { 'puppetserver':
-    ensure => 'installed',
-  } -> 
-  service { 'puppetserver':
-    ensure => 'running',
-    enable => true,
-  }
-
   ssh_authorized_key { 'tosmi':
     user => 'root',
     type => 'ssh-rsa',
