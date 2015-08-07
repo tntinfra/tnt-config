@@ -3,7 +3,7 @@ class puppetmaster {
 :sources:
   :plops:
     remote: 'https://github.com/tntinfra/puppet-tnt.git'
-    basedir: '/etc/puppet/environments'\n"
+    basedir: '/etc/puppetlabs/code/environments'\n"
 
   package { 'puppetserver':
     ensure => 'installed',
