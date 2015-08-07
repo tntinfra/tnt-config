@@ -17,7 +17,7 @@ class puppetmaster {
     ensure => '2.0.2',
     provider => 'gem',
   } ->
-  file { '/etc/r10k.yaml':
+  file { '/etc/puppetlabs/r10k/r10k.yaml':
     ensure => 'file',
     content => $r10k_content,
   }
