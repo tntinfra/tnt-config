@@ -14,7 +14,7 @@ class puppetmaster {
   }
 
   package { 'r10k':
-    ensure => 'installed',
+    ensure => '2.0.2',
     provider => 'gem',
   } ->
   file { '/etc/r10k.yaml':
