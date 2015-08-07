@@ -7,7 +7,7 @@ class puppetmaster {
 
   package { 'puppetserver':
     ensure => 'installed',
-  } -> 
+  } ->
   service { 'puppetserver':
     ensure => 'running',
     enable => true,
@@ -16,6 +16,9 @@ class puppetmaster {
   package { 'r10k':
     ensure => '2.0.2',
     provider => 'gem',
+  } ->
+  file { '/etc/puppetlabs/r10k':
+    ensure => 'directory',
   } ->
   file { '/etc/puppetlabs/r10k/r10k.yaml':
     ensure => 'file',
